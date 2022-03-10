@@ -14,9 +14,9 @@
   resolved "https://registry.yarnpkg.com/@apollographql/graphql-playground-html/-/graphql-playground-html-1.6.24.tgz#3ce939cb127fb8aaa3ffc1e90dff9b8af9f2e3dc"
   integrity sha512-8GqG48m1XqyXh4mIZrtB5xOhUwSsh1WsrrsaZQOEYYql3YN9DEu9OOSg0ILzXHZo/h2Q74777YE4YzlArQzQEQ==
 
-"@apollographql/graphql-playground-react@https://github.com/Joystream/graphql-playground/releases/download/joystream%401.7.28/graphql-playground-react-v1.7.28.tgz":
-  version "1.7.28"
-  resolved "https://github.com/Joystream/graphql-playground/releases/download/joystream%401.7.28/graphql-playground-react-v1.7.28.tgz#24c9c54e14ae0ba13c894738b4b87301f5801b26"
+"@apollographql/graphql-playground-react@https://github.com/Joystream/graphql-playground/releases/download/graphql-playground-react%401.7.29/graphql-playground-react-v1.7.29.tgz":
+  version "1.7.29"
+  resolved "https://github.com/Joystream/graphql-playground/releases/download/graphql-playground-react%401.7.29/graphql-playground-react-v1.7.29.tgz#bf0bf4a72f74de156ccf2a8638e7cb617a8b41e2"
   dependencies:
     "@types/lru-cache" "^4.1.1"
     apollo-link "^1.2.13"
