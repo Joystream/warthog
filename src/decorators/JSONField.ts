@@ -10,6 +10,7 @@ interface JSONFieldOptions {
   nullable?: boolean;
   filter?: boolean;
   gqlFieldType?: ClassType;
+  array?: boolean;
 }
 
 export function JSONField(options: JSONFieldOptions = {}): any {
