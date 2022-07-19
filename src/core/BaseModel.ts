@@ -3,10 +3,8 @@ import { Field, ID, Int, InterfaceType, ObjectType } from 'type-graphql';
 import {
   BeforeInsert,
   Column,
-  CreateDateColumn,
   PrimaryColumn,
   PrimaryGeneratedColumn,
-  UpdateDateColumn,
   VersionColumn,
 } from 'typeorm';
 
@@ -41,10 +39,10 @@ export abstract class BaseModel implements BaseGraphQLObject {
   @PrimaryColumn({ type: String })
   id!: IDType;
 
-  @CreateDateColumn() createdAt!: Date;
+  @Column() createdAt!: Date;
   @Column() createdById!: IDType;
 
-  @UpdateDateColumn({ nullable: true })
+  @Column({ nullable: true })
   updatedAt?: Date;
   @Column({ nullable: true })
   updatedById?: IDType;
@@ -82,10 +80,10 @@ export abstract class BaseModelUUID implements BaseGraphQLObject {
   @PrimaryGeneratedColumn('uuid')
   id!: IDType;
 
-  @CreateDateColumn() createdAt!: Date;
+  @Column() createdAt!: Date;
   @Column() createdById!: IDType;
 
-  @UpdateDateColumn({ nullable: true })
+  @Column({ nullable: true })
   updatedAt?: Date;
   @Column({ nullable: true })
   updatedById?: IDType;
