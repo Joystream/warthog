@@ -326,6 +326,8 @@ Almost all config in Warthog is driven by environment variables. The following i
 | WARTHOG_RESOLVERS_PATH        | Where should Warthog look for resolvers                  | src/\*\*\/\*.resolver.ts  |
 | WARTHOG_SUBSCRIPTIONS         | Should we enable subscriptions and open a websocket port | false                     |
 | WARTHOG_VALIDATE_RESOLVERS    | TypeGraphQL validation enabled?                          | false                     |
+| WARTHOG_RESOLVER_TIMEOUT_MS   | Highest time a resolver should take before timing out    | _none_                    |
+| WARTHOG_RELATION_CONCURRENCY  | Max number of relations a resolver can query in parallel | 30                        |
 
 ## Field/Column Decorators
 
