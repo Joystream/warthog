@@ -15,6 +15,8 @@ export class DataLoaderMiddleware implements MiddlewareInterface<BaseContext> {
       };
 
       const reqTimeout = Number(process.env.WARTHOG_RESOLVER_TIMEOUT_MS);
+      const chunkSize = Number(process.env.WARTHOG_RELATION_CONCURRENCY) || 30;
+
       const abortSignal = reqTimeout ? AbortSignal.timeout(reqTimeout) : undefined;
 
       const loaders = context.dataLoader.loaders;
@@ -37,7 +39,6 @@ export class DataLoaderMiddleware implements MiddlewareInterface<BaseContext> {
                 throw new Error('You must flatten arrays of arrays of entities');
               }
 
-              const chunkSize = Number(process.env.WARTHOG_RELATION_CONCURRENCY) || 30;
               return chunk(entities, chunkSize).reduce<Promise<any[][]>>(
                 async (prev, entityChunk) => {
                   const next = await prev;
